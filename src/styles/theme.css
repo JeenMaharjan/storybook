@@ -1,0 +1,185 @@
+/* src/styles/theme.css */
+@layer base {
+  /* shared button layout tokens (from Scale) */
+  :root {
+    --btn-radius: 8px;
+    --btn-border: 1px;
+    --btn-px: 16px;
+    --btn-py: 12px;
+
+    --btn-disabled-bg: #878585;   /* Grey.400 */
+    --btn-disabled-text: #767676; /* Grey.600 */
+    --btn-disabled-border: #cdcdcd;
+
+      --drawer-overlay: rgba(0, 0, 0, 0.35);
+      --drawer-shadow: -10px 0 30px rgba(0, 0, 0, 0.15);
+
+      /* card surface */
+      --card-radius: 16px;
+      --card-border: rgba(0, 0, 0, 0.08);
+
+      /* text */
+      --text-default: #111827;
+      --text-muted: rgba(17, 24, 39, 0.65);
+
+    --focus-ring: #1d4ed8;
+  }
+
+  /* BRAND A */
+  .theme-brandA {
+    --surface-page: #faf9f5; /* BrandA Paper.1000 */
+
+    /* Primary */
+    --btn-primary-bg: #fc4c02;        /* BrandA Orange.Default */
+    --btn-primary-bg-hover: #711f06;  /* BrandA Orange.600 */
+    --btn-primary-text: #000000;      /* Black.1000 */
+    --btn-primary-focus: #aa2700;     /* BrandA Orange.700 */
+
+    /* Secondary */
+    --btn-secondary-bg: #faf9f5;        /* BrandA Paper.1000 */
+    --btn-secondary-bg-hover: #f5f4f0;  /* BrandA Paper.1100 */
+    --btn-secondary-text: #000000;      /* Black.1000 */
+    --btn-secondary-border: #fc4c02;    /* BrandA Orange.Default */
+    --btn-secondary-focus: #aa2700;     /* BrandA Orange.700 */
+
+    /* Tertiary */
+    --btn-tertiary-bg: transparent;
+    --btn-tertiary-bg-hover: #f2fdfb;   /* BrandA Green.50 */
+    --btn-tertiary-text: #1fceb5;       /* BrandA Green.Default */
+    --btn-tertiary-text-hover: #1aad98; /* BrandA Green.600 */
+    --btn-tertiary-focus: #127869;      /* BrandA Green.700 */
+
+    /* INPUT */
+  --input-radius: 10px;
+  --input-bg: #ffffff;
+  --input-bg-filled: #ffffff;
+
+  --input-text: #111827;
+  --input-placeholder: #9ca3af;
+  --input-label: #111827;
+  --input-help: #6b7280;
+
+  --input-border: #d1d5db;
+  --input-border-hover: #9ca3af;
+
+  --input-focus: var(--focus-ring);
+
+  --input-error: #dc3545;   /* Red.500 */
+  --input-success: #28a745; /* Green.500 */
+
+  --input-disabled-bg: #f3f4f6;
+  --input-disabled-text: #9ca3af;
+  --input-disabled-border: #e5e7eb;
+
+   /* SELECT / DROPDOWN (reuses input tokens) */
+  --select-radius: var(--input-radius);
+  --select-bg: var(--input-bg);
+  --select-text: var(--input-text);
+  --select-placeholder: var(--input-placeholder);
+
+  --select-border: var(--input-border);
+  --select-border-hover: var(--input-border-hover);
+  --select-focus: var(--focus-ring);
+
+  --select-panel-bg: var(--input-bg);
+  --select-option-hover-bg: #f3f4f6;
+
+  --select-disabled-bg: var(--input-disabled-bg);
+  --select-disabled-text: var(--input-disabled-text);
+  --select-disabled-border: var(--input-disabled-border);
+
+  --card-radius: 16px;
+  --card-bg: var(--surface-page);
+  --card-border: rgba(0,0,0,0.08);
+  --card-title: #000000;
+  --card-muted: rgba(0,0,0,0.65);
+
+  /* promo background */
+  --card-promo-bg: linear-gradient(135deg, rgba(252, 76, 2, 0.18), rgba(31, 206, 181, 0.18));
+
+
+
+  }
+
+  /* BRAND B */
+  .theme-brandB {
+    --surface-page: #f5f5f5; /* Grey.100 (mapped page in tokens is Grey.100) */
+
+    /* Primary */
+    --btn-primary-bg: #901438;        /* BrandB Cherry.Default */
+    --btn-primary-bg-hover: #73102d;  /* BrandB Cherry.600 */
+    --btn-primary-text: #ffffff;      /* White.1000 */
+    --btn-primary-focus: #480a1c;     /* BrandB Cherry.700 */
+
+    /* Secondary */
+    --btn-secondary-bg: #f7f6f4;        /* BrandB Salt.1000 */
+    --btn-secondary-bg-hover: #ebeae8;  /* BrandB Salt.1050 */
+    --btn-secondary-text: #000000;      /* Black.1000 */
+    --btn-secondary-border: #901438;    /* BrandB Cherry.Default */
+    --btn-secondary-focus: #480a1c;     /* BrandB Cherry.700 */
+
+    /* Tertiary */
+    --btn-tertiary-bg: transparent;
+    --btn-tertiary-bg-hover: #fffaff;   /* BrandB Violet.50 */
+    --btn-tertiary-text: #f89eff;       /* BrandB Violet.Default */
+    --btn-tertiary-text-hover: #ae6fb2; /* BrandB Violet.600 */
+    --btn-tertiary-focus: #7c4f80;      /* BrandB Violet.700 */
+
+    
+  /* INPUT */
+  --input-radius: 0px; /* example difference */
+  --input-bg: #ffffff;
+  --input-bg-filled: #ffffff;
+
+  --input-text: #111827;
+  --input-placeholder: #9ca3af;
+  --input-label: #111827;
+  --input-help: #6b7280;
+
+  --input-border: #d1d5db;
+  --input-border-hover: #9ca3af;
+
+  --input-focus: var(--focus-ring);
+
+  --input-error: #dc3545;   /* Red.500 */
+  --input-success: #28a745; /* Green.500 */
+
+  --input-disabled-bg: #f3f4f6;
+  --input-disabled-text: #9ca3af;
+  --input-disabled-border: #e5e7eb;
+
+  /* inside .theme-brandB */
+  /* SELECT / DROPDOWN */
+  --select-radius: var(--input-radius);
+  --select-bg: var(--input-bg);
+  --select-text: var(--input-text);
+  --select-placeholder: var(--input-placeholder);
+
+  --select-border: var(--input-border);
+  --select-border-hover: var(--input-border-hover);
+  --select-focus: var(--focus-ring);
+
+  --select-panel-bg: var(--input-bg);
+  --select-option-hover-bg: #f3f4f6;
+
+  --select-disabled-bg: var(--input-disabled-bg);
+  --select-disabled-text: var(--input-disabled-text);
+  --select-disabled-border: var(--input-disabled-border);
+
+  --card-radius: 16px;
+  --card-bg: var(--surface-page);
+  --card-border: rgba(0,0,0,0.08);
+  --card-title: #000000;
+  --card-muted: rgba(0,0,0,0.65);
+
+  --card-promo-bg: linear-gradient(135deg, rgba(144, 20, 56, 0.18), rgba(248, 158, 255, 0.18));
+
+  --drawer-panel-bg: var(--surface-page);
+
+  --card-promo-bg: linear-gradient(
+    135deg,
+    rgba(144, 20, 56, 0.18),
+    rgba(248, 158, 255, 0.18)
+  );
+  }
+}

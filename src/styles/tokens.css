@@ -1,0 +1,65 @@
+/* src/styles/tokens.css */
+
+/* Brand A */
+:root[data-theme="brandA"] {
+  --surface-page: #ffffff;
+  --focus-ring: #1d4ed8;
+
+  --btn-radius: 10px;
+  --btn-font-weight: 600;
+
+  /* Primary */
+  --btn-primary-bg: #fc4c02;
+  --btn-primary-bg-hover: #e34302;
+  --btn-primary-bg-disabled: #f4b199;
+  --btn-primary-text: #ffffff;
+  --btn-primary-text-disabled: #ffffff;
+
+  /* Secondary */
+  --btn-secondary-bg: transparent;
+  --btn-secondary-bg-hover: rgba(252, 76, 2, 0.08);
+  --btn-secondary-bg-disabled: transparent;
+  --btn-secondary-border: #fc4c02;
+  --btn-secondary-border-disabled: #f4b199;
+  --btn-secondary-text: #fc4c02;
+  --btn-secondary-text-disabled: #f4b199;
+
+  /* Tertiary */
+  --btn-tertiary-bg: transparent;
+  --btn-tertiary-bg-hover: rgba(0, 0, 0, 0.06);
+  --btn-tertiary-bg-disabled: transparent;
+  --btn-tertiary-text: #111827;
+  --btn-tertiary-text-disabled: #9ca3af;
+}
+
+/* Brand B (different styling) */
+:root[data-theme="brandB"] {
+  --surface-page: #ffffff;
+  --focus-ring: #0ea5e9;
+
+  --btn-radius: 0px; /* example difference */
+  --btn-font-weight: 600;
+
+  /* Primary */
+  --btn-primary-bg: #901438;
+  --btn-primary-bg-hover: #7d1030;
+  --btn-primary-bg-disabled: #e5b3c0;
+  --btn-primary-text: #ffffff;
+  --btn-primary-text-disabled: #ffffff;
+
+  /* Secondary */
+  --btn-secondary-bg: transparent;
+  --btn-secondary-bg-hover: rgba(144, 20, 56, 0.10);
+  --btn-secondary-bg-disabled: transparent;
+  --btn-secondary-border: #901438;
+  --btn-secondary-border-disabled: #e5b3c0;
+  --btn-secondary-text: #901438;
+  --btn-secondary-text-disabled: #e5b3c0;
+
+  /* Tertiary */
+  --btn-tertiary-bg: transparent;
+  --btn-tertiary-bg-hover: rgba(0, 0, 0, 0.06);
+  --btn-tertiary-bg-disabled: transparent;
+  --btn-tertiary-text: #111827;
+  --btn-tertiary-text-disabled: #9ca3af;
+}

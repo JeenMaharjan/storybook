@@ -1,0 +1,79 @@
+
+@reference "../../index.css";
+
+@layer components {
+  .field {
+    @apply grid w-full gap-[6px];
+  }
+
+  .field__label {
+    @apply text-[14px] leading-[20px] font-semibold;
+    color: var(--input-label);
+  }
+
+  .field__control {
+    @apply w-full px-3 py-2 text-[16px] leading-[24px]
+      transition-[background-color,color,border-color,box-shadow] duration-150 ease-in-out;
+
+    border-radius: var(--input-radius, 10px);
+    border: 1px solid var(--input-border);
+    background: var(--input-bg);
+    color: var(--input-text);
+  }
+
+  .field__control::placeholder {
+    color: var(--input-placeholder);
+  }
+
+  .field__control:hover:not(:disabled) {
+    border-color: var(--input-border-hover);
+  }
+
+  .field__control:focus-visible {
+    @apply outline-none;
+    border-color: var(--input-focus);
+    box-shadow: 0 0 0 2px var(--input-focus), 0 0 0 4px var(--surface-page, #fff);
+  }
+
+  /* FILLED */
+  .field--filled .field__control {
+    background: var(--input-bg-filled);
+  }
+
+  /* DISABLED */
+  .field__control:disabled {
+    @apply cursor-not-allowed;
+    background: var(--input-disabled-bg);
+    color: var(--input-disabled-text);
+    border-color: var(--input-disabled-border);
+  }
+
+  /* ERROR */
+  .field--error .field__control {
+    border-color: var(--input-error);
+  }
+  .field--error .field__control:focus-visible {
+    border-color: var(--input-error);
+    box-shadow: 0 0 0 2px var(--input-error), 0 0 0 4px var(--surface-page, #fff);
+  }
+  .field--error .field__hint {
+    color: var(--input-error);
+  }
+
+  /* SUCCESS */
+  .field--success .field__control {
+    border-color: var(--input-success);
+  }
+  .field--success .field__control:focus-visible {
+    border-color: var(--input-success);
+    box-shadow: 0 0 0 2px var(--input-success), 0 0 0 4px var(--surface-page, #fff);
+  }
+  .field--success .field__hint {
+    color: var(--input-success);
+  }
+
+  .field__hint {
+    @apply text-[13px] leading-[19px];
+    color: var(--input-help);
+  }
+}

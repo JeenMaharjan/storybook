@@ -1,0 +1,65 @@
+@reference "../../index.css";
+
+@layer components {
+  .select {
+    @apply grid gap-1 w-full;
+  }
+
+  .select__label {
+    @apply text-sm font-semibold;
+    color: var(--input-label);
+  }
+
+  .select__trigger {
+    @apply inline-flex items-center justify-between w-full
+      px-3 py-2 text-base
+      transition-colors
+      focus-visible:outline-none focus-visible:ring-2
+      focus-visible:ring-[color:var(--select-focus)]
+      focus-visible:ring-offset-2
+      focus-visible:ring-offset-[color:var(--surface-page,#fff)]
+      disabled:cursor-not-allowed;
+    
+    border-radius: var(--select-radius, 10px);
+    border: 1px solid var(--select-border);
+    background: var(--select-bg);
+    color: var(--select-text);
+  }
+
+  .select__trigger:hover:not(:disabled) {
+    border-color: var(--select-border-hover);
+  }
+
+  .select[data-open="true"] .select__trigger {
+    border-color: var(--select-focus);
+  }
+
+  .select__value--placeholder {
+    color: var(--select-placeholder);
+  }
+
+  .select__panel {
+    @apply mt-1 w-full rounded-md border shadow-sm overflow-hidden;
+    background: var(--select-panel-bg);
+    border-color: var(--select-border);
+  }
+
+  .select__option {
+    @apply w-full text-left px-3 py-2 text-sm cursor-pointer;
+    color: var(--select-text);
+  }
+
+  .select__option:hover {
+    background: var(--select-option-hover-bg);
+  }
+
+  .select__option[aria-selected="true"] {
+    @apply font-semibold;
+  }
+
+  .select__trigger:disabled {
+    background: var(--select-disabled-bg);
+    color: var(--select-disabled-text);
+    border-color: var(--select-disabled-border);
+  }
+}

@@ -1,0 +1,59 @@
+@reference "../../index.css";
+
+.login {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+@layer components {
+  .login__div {
+    @apply w-full max-w-md;
+    background: var(--form-bg, #fff);
+    border: 1px solid var(--form-border, rgba(0,0,0,0.10));
+    border-radius: var(--card-radius, 16px);
+    box-shadow: var(--form-shadow, 0 8px 24px rgba(0,0,0,0.08));
+    padding: 24px;
+  }
+
+  /* responsive padding */
+  @media (min-width: 640px) {
+    .login__div {
+      padding: 32px;
+    }
+  }
+
+  .login__header {
+    @apply mb-4;
+  }
+
+  .login__title {
+    @apply text-2xl font-semibold;
+    color: var(--text-default, var(--input-label));
+  }
+
+  .login__subtitle {
+    @apply mt-1 text-sm;
+    color: var(--text-muted, var(--input-help));
+  }
+
+  .login__promo {
+    @apply mt-4;
+  }
+
+  .login__stack {
+    @apply mt-4 grid gap-4;
+  }
+
+  .login__actions {
+    @apply mt-2 flex gap-3;
+  }
+
+  .login__hint {
+    @apply text-[13px] leading-[19px];
+    color: var(--input-help);
+  }
+}
